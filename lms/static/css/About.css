@@ -1,0 +1,73 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* About Section */
+.about{
+    padding: 60px 20px;
+    background: #f8f9fa;
+}
+
+/* Title */
+.about h3{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #54cbbe;
+    position: relative;
+}
+
+/* underline */
+.about h3::after{
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #4eafc7;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Image */
+.about img{
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+}
+
+.about img:hover{
+    transform: scale(1.05);
+}
+
+/* Text */
+.about p{
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* Scroll Animation */
+.reveal{
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 3s ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width:768px){
+
+    .about p{
+        text-align: center;
+    }
+
+}

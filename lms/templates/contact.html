@@ -1,0 +1,52 @@
+{% extends "navBar.html" %}
+{% load static %}
+{% block title %}Contact Us{% endblock title %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'css/Contact.css' %}">
+{% endblock css %}
+
+{% block body %}
+
+<div class="contact-container">
+
+
+<div class="contact-box">
+
+    <h2>Contact Us</h2>
+    <p class="subtitle">We would love to hear from you</p>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="input-group">
+            <input type="text" name="name" required>
+            <label>Your Name</label>
+        </div>
+
+        <div class="input-group">
+            <input type="email" name="email" required>
+            <label>Email Address</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" name="subject" required>
+            <label>Subject</label>
+        </div>
+
+        <div class="input-group">
+            <textarea name="message" rows="4" required></textarea>
+            <label>Your Message</label>
+        </div>
+
+        <button type="submit" class="contact-btn">Send Message</button>
+
+    </form>
+
+</div>
+
+
+</div>
+
+{% endblock body %}

@@ -1,0 +1,64 @@
+{% extends "navBar.html" %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/About.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+{% endblock css %}
+
+{% block body %}
+
+<div class="container-fluid about">
+{% for info in about %}
+
+<div class="row justify-content-center align-items-center mb-5 reveal">
+
+    <!-- Title -->
+    <div class="col-12 text-center">
+        <h3>{{ info.title }}</h3>
+    </div>
+
+    <!-- Image -->
+    <div class="col-lg-5 col-md-6 col-sm-12">
+        <img src="{{ info.img.url }}" alt="{{ info.title }}" class="img-fluid">
+    </div>
+
+    <!-- Description -->
+    <div class="col-lg-5 col-md-6 col-sm-12">
+        <p>{{ info.des }}</p>
+    </div>
+
+</div>
+
+{% endfor %}
+```
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+    function revealOnScroll(){
+        const reveals = document.querySelectorAll(".reveal");
+
+        reveals.forEach((element) => {
+
+            const windowHeight = window.innerHeight;
+            const elementTop = element.getBoundingClientRect().top;
+            const revealPoint = 120;
+
+            if(elementTop < windowHeight - revealPoint){
+                element.classList.add("active");
+            }
+
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+
+});
+</script>
+
+{% endblock body %}
