@@ -1,0 +1,53 @@
+body{
+font-family:'Poppins',sans-serif;
+}
+
+.login-wrapper{
+width:350px;
+margin:120px auto;
+padding:30px;
+border:1px solid #ddd;
+border-radius:8px;
+text-align:center;
+}
+
+.login-wrapper h2{
+margin-bottom:25px;
+}
+
+.input-box{
+margin-bottom:20px;
+text-align:left;
+}
+
+.input-box label{
+display:block;
+margin-bottom:5px;
+font-size:14px;
+}
+
+.input-box input{
+width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+.login-btn{
+width:100%;
+padding:10px;
+border:none;
+background:#4eafc7;
+color:white;
+border-radius:4px;
+cursor:pointer;
+}
+
+.login-btn:hover{
+background:#3a8da3;
+}
+
+.register-link{
+margin-top:15px;
+font-size:14px;
+}

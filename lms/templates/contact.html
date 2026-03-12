@@ -21,22 +21,22 @@
         {% csrf_token %}
 
         <div class="input-group">
-            <input type="text" name="name" required>
+            <input type="text" id="name" name="name" required>
             <label>Your Name</label>
         </div>
 
         <div class="input-group">
-            <input type="email" name="email" required>
+            <input type="email" id="email" name="email" required>
             <label>Email Address</label>
         </div>
 
         <div class="input-group">
-            <input type="text" name="subject" required>
+            <input type="text" id="subject" name="subject" required>
             <label>Subject</label>
         </div>
 
         <div class="input-group">
-            <textarea name="message" rows="4" required></textarea>
+            <textarea name="message" id="message" rows="4" required></textarea>
             <label>Your Message</label>
         </div>
 

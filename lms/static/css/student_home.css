@@ -1,0 +1,92 @@
+/* NAVBAR CONTAINER */
+
+.custom-navbar{
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.75);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 14px 40px;
+    transition: all 0.3s ease;
+}
+
+/* BRAND LOGO */
+
+.navbar-brand{
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(45deg,#4eafc7,#7a5cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+/* NAV ITEMS */
+
+.navbar-nav .nav-link{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 12px;
+    position: relative;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* HOVER ANIMATION */
+
+.navbar-nav .nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(45deg,#4eafc7,#7a5cff);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after{
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover{
+    color:#4eafc7;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown-menu{
+    border-radius:10px;
+    border:none;
+    padding:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.dropdown-item{
+    padding:10px 14px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.dropdown-item:hover{
+    background:#f1f7ff;
+    color:#4eafc7;
+}
+
+/* NAVBAR SHADOW ON SCROLL */
+
+.custom-navbar.scrolled{
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* MOBILE NAVBAR */
+
+@media (max-width:991px){
+
+.navbar-nav{
+    padding-top:10px;
+}
+
+.navbar-nav .nav-link{
+    margin:10px 0;
+}
+
+}

@@ -1,0 +1,118 @@
+body{
+    font-family:'Poppins',sans-serif;
+}
+
+/* main container */
+
+.form-wrapper{
+    max-width:700px;
+    margin:60px auto;
+    padding:30px;
+}
+
+/* progress bar */
+
+.progress-bar{
+    position:relative;
+    height:6px;
+    background:#ddd;
+    margin-bottom:30px;
+}
+
+.progress{
+    width:50%;
+    height:100%;
+    background:#4eafc7;
+}
+
+.step-left{
+    position:absolute;
+    top:-25px;
+    left:0;
+    font-size:14px;
+}
+
+.step-right{
+    position:absolute;
+    top:-25px;
+    right:0;
+    font-size:14px;
+}
+
+/* headings */
+
+.form-title{
+    font-weight:500;
+}
+
+.section-title{
+    margin:25px 0;
+}
+
+/* rows */
+
+.form-row{
+    margin-bottom:20px;
+}
+
+.form-row label{
+    display:block;
+    margin-bottom:8px;
+}
+
+/* input fields */
+
+input,select{
+    width:100%;
+    padding:12px;
+    border:1px solid #bbb;
+    border-radius:4px;
+    font-size:14px;
+}
+
+/* two inputs in same line */
+
+.input-flex{
+    display:flex;
+    gap:20px;
+}
+
+/* grid layout */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+/* button */
+
+.next-btn{
+    display:block;
+    margin:30px auto 0;
+    padding:12px 40px;
+    border:2px solid #4eafc7;
+    background:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.next-btn:hover{
+    background:#4eafc7;
+    color:white;
+}
+
+/* responsive */
+
+@media(max-width:600px){
+
+    .input-flex{
+        flex-direction:column;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+}

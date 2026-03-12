@@ -1,5 +1,60 @@
 {% extends "navBar.html" %}
 {% load static %}
-{% block title %}Sign Up {% endblock title %}
+
+{% block title %}Student Registration{% endblock title %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'css/registration.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+{% endblock css %}
+
 {% block body %}
+
+<div class="form-wrapper">
+
+<h1 class="form-title">Student Registration Form</h1>
+<hr>
+
+<form method="POST" action="{% url 'register' %}">
+{% csrf_token %}
+
+<div class="form-row">
+<div class="input-flex">
+<input type="text" name="first_name" placeholder="First Name" required>
+<input type="text" name="last_name" placeholder="Last Name" required>
+</div>
+</div>
+
+<div class="form-grid">
+<input type="email" name="email" placeholder="Enter Your Email" required>
+<input type="password" name="password" placeholder="Enter Your Password" required>
+</div>
+
+<div class="form-row">
+<label>Phone</label>
+<input type="text" name="phone" placeholder="Enter Your Phone Number" required>
+</div>
+
+<div class="form-row">
+<label>Course</label>
+<input type="text" name="course" placeholder="Enter Course Name">
+</div>
+
+<div class="form-grid">
+<input type="text" name="city" placeholder="City">
+<input type="text" name="country" placeholder="Country">
+</div>
+
+<div class="form-row">
+<label>ZIP Code</label>
+<input type="text" name="zip" placeholder="ZIP Code">
+</div>
+
+<button type="submit" class="next-btn">Register</button>
+
+</form>
+
+</div>
+
 {% endblock body %}
