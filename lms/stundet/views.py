@@ -56,7 +56,7 @@ def Login(request):
             return redirect("Student_home")
 
         except RegisteredUser.DoesNotExist:
-            return render(request, "login.html", {"error":"Invalid Email or Password"})
+                return render(request, "login.html", {"error":"Invalid Email or Password"})
      return render(request , "login.html")
 
 # for student page
